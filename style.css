@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Pixels&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .6vw;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: #229e4548;
+    border-radius: 6px;
+}
+html::-webkit-scrollbar-track{
+    background-color: #333;
+}
+html::-webkit-scrollbar-thumb:hover{
+    background-color: #229e45;
+    border-radius: 6px;
+}
+
+
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100000;
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.head .logo {
+    font-family: 'Rubik Pixels', cursive;
+    font-size: 3em;
+    position: relative;
+    color: #fff;
+}
+#home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+}
+header ul{
+    position: relative;
+    display: flex;
+    gap: 40px;
+}
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.15em;
+    transition: 0.5s ;
+}
+header ul li.active a,
+    header ul li:hover a{
+    color: #30fe6c;
+    transition: 0.5s ;
+
+}
+
+
+
+#home .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    max-width: 40vw;
+    height: 100vh;
+    z-index: 10;
+    left: 0;
+    background-color: transparent;
+
+    
+}
+#home .content h2 {
+    position: relative;
+    font-size: 5em;
+    color: #30fe6c;
+}
+#home .content h2 .th1{
+    position: relative;
+    font-size: 0.6em;
+
+}
+#home .content h2 .th2{
+    font-size: 0.2em;
+}
+#home .content h2 .th3{
+    position: relative;
+    font-size: 0.1em;
+    left: 1;
+    color: black;
+
+}
+#home .content p{
+    position: relative;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+.btn{
+    position: relative;
+    display: inline-block;
+    font-size: 1.15em;
+    max-width: 180px;
+    background-color: #30fe6c;
+    color: #222;
+    text-align: center;
+    text-decoration: none;
+    padding: 18px 30px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-top: 10px;
+
+}
+#home::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    background: #222;
+    z-index: 1;
+    filter: blur(10px);
+}
+#home .homebg{
+    position: absolute;
+    bottom: 5vh;
+    right: 5vh;
+    height: 80vh;
+    filter: blur(10px);
+    transition: 0.5s;
+}
+#home .homebg:hover{
+    filter: blur(3px);
+    transition: 0.5s;
+}
+#about,
+
+    #join {
+    position: relative;
+    background: #34353a;
+    min-height: 100vh;
+    padding: 120px 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#about::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    top: -50px;
+    left: 0;
+    backdrop-filter: blur(20px);
+}
+.secText{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.secText h2{
+    font-size: 3em;
+    color: #fff;
+}
+.secText p{
+    max-width: 700px;
+    text-align: center;
+    color: #aaa;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+#about .content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+
+    margin: 40px 0;
+
+}
+#about .content .abtBx{
+    background: #2e2f34;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid #2e2f34;
+    cursor: pointer;
+    transition: 0.5s ;
+}
+#about .content .abtBx:hover
+{
+    border: 2px solid #229e45;
+    transition: 0.5s ;
+}
+#about .content .abtBx i{
+    max-width: 100px;
+    filter: invert(1);
+    opacity: 0.5;
+    font-size: 3em;    
+}
+#about .content .abtBx:hover i{
+    opacity: 1;
+}
+#about .content .abtBx h3{
+    color: #fff;
+    font-weight: 700;
+    color: #30fe6c;
+}
+#about .content .abtBx p{
+    color: #fff;
+}
+.center{
+    width: 100%;
+    text-align: center;
+}
+#join{
+    background-color: #222;
+}
+#join::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    top: -50px;
+    left: 0;
+    backdrop-filter: blur(20px);
+}
+#join .content
+ {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+
+    margin: 40px 0;
+}
+
+#join .content a{
+    background-color: #2e2f34;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff;
+    transition: 0.5s;
+}
+#join .content a:hover{
+    background-color: #30fe6c;
+}
+#join .content a i{
+    color: #30fe6c;
+    font-size: 1.5em;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+#join .content a:hover i,
+#join .content a:hover{
+    color: #222;
+}
+.cpr{
+    margin-top: 150px;
+    position: relative;
+    color: #aaa;
+    font-size: 1.1em;
+}
+.cpr a{
+    color: #30fe6c;
+}
+/* Responsive Time !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+@media (max-width :1000px)
+{
+    header
+    {
+        padding: 20px 50px;
+    }
+    #home{flex-direction: row; padding-bottom: 0;}
+    #home .content h2{font-size: 3em;}
+    #home .content p{font-size: .8em;}
+    .btn{max-width: 160px; padding: 10px 20px;}
+    
+    .secText h2{font-size: 2em; text-align: center;}
+    .secText p{font-size: .8em; text-align: center;}
+    #about, #join{padding: 100px 50px 50px;}
+    #about .content{grid-template-columns: repeat(2,1fr);}
+    #join .content{grid-template-columns: repeat(2,1fr);}
+    .cpr{font-size: .8em;}
+    .menuToggle{
+        position: relative;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .menuToggle::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transform: translateY(-10px);
+        transition: 0.5s;
+        box-shadow: 0 10px #fff;
+    }
+    .menuToggle::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    header.active .menuToggle::before
+    {
+        transform: translateY(0px) rotate(45deg);
+        box-shadow: 0 0 #fff;
+    }
+    header.active .menuToggle::after
+    {
+        transform: translateY(0px) rotate(-45deg);
+    }
+    header ul{display: none;}
+    header.active ul{
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 97px);
+        left: 0;
+        top: 97px;
+        background: rgba(50, 50, 50, 0.95);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 10000;
+        gap: 20px;
+    }
+    header.active ul li a{font-size: 2em; font-weight: 700;}
+}
+@media (max-width :700px)
+{
+    
+    #home{padding: 150px 50px; flex-direction: column; padding-bottom: 0;}
+    #home .content h2{font-size: 3em;}
+    #home .content p{font-size: .7em;}
+    .btn{max-width: 160px; padding: 10px 20px;}
+    
+    .secText h2{font-size: 2em; text-align: center;}
+    .secText p{font-size: .8em; text-align: center;}
+    #about, #join{padding: 100px 50px 50px;}
+    #about .content{grid-template-columns: repeat(1,1fr);}
+    #join .content{grid-template-columns: repeat(1,1fr);}
+    #join .content a{height: 80px;}
+}
